@@ -46,6 +46,8 @@ resource "google_compute_instance" "demo" {
   machine_type = "${var.machine_type}"
   zone         = "${var.gcp_zone}"
 
+  tags = ["web"]
+
   boot_disk {
     initialize_params {
       image = "${var.image}"
